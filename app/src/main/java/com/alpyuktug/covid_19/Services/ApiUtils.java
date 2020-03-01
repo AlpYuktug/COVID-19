@@ -1,4 +1,4 @@
-package com.alpyuktug.covid_19;
+package com.alpyuktug.covid_19.Services;
 
 public class ApiUtils {
 

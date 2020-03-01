@@ -1,4 +1,4 @@
-package com.alpyuktug.covid_19;
+package com.alpyuktug.covid_19.Services;
 
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;

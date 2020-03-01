@@ -1,4 +1,4 @@
-package com.alpyuktug.covid_19;
+package com.alpyuktug.covid_19.Fragments;
 
 import android.os.Bundle;
 import android.util.Log;
@@ -13,6 +13,12 @@ import java.util.List;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
+
+import com.alpyuktug.covid_19.Models.CountriesList;
+import com.alpyuktug.covid_19.Models.Covid19Country;
+import com.alpyuktug.covid_19.R;
+import com.alpyuktug.covid_19.Services.ApiUtils;
+import com.alpyuktug.covid_19.Services.CountriesDAOInerface;
 
 public class FragmentDashboard extends Fragment {
 

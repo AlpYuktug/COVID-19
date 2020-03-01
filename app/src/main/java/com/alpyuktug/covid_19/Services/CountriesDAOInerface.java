@@ -1,4 +1,6 @@
-package com.alpyuktug.covid_19;
+package com.alpyuktug.covid_19.Services;
+
+import com.alpyuktug.covid_19.Models.CountriesList;
 
 import retrofit2.Call;
 import retrofit2.http.GET;

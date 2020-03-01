@@ -1,4 +1,4 @@
-package com.alpyuktug.covid_19;
+package com.alpyuktug.covid_19.Fragments;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -9,9 +9,11 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-public class FragmentMeasures extends Fragment {
+import com.alpyuktug.covid_19.R;
 
-    public FragmentMeasures() {
+public class FragmentNews extends Fragment {
+
+    public FragmentNews() {
     }
 
     @Override
@@ -23,8 +25,7 @@ public class FragmentMeasures extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_measures, container, false);
+        View view = inflater.inflate(R.layout.fragment_news, container, false);
         return view;
     }
 }
-

@@ -1,5 +1,5 @@
 
-package com.alpyuktug.covid_19;
+package com.alpyuktug.covid_19.Models;
 
 import java.util.List;
 import com.google.gson.annotations.Expose;

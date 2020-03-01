@@ -1,4 +1,4 @@
-package com.alpyuktug.covid_19;
+package com.alpyuktug.covid_19.Activities;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -9,6 +9,12 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.view.MenuItem;
 
+import com.alpyuktug.covid_19.Fragments.FragmentDashboard;
+import com.alpyuktug.covid_19.Fragments.FragmentDashboard;
+import com.alpyuktug.covid_19.Fragments.FragmentDashboard;
+import com.alpyuktug.covid_19.Fragments.FragmentMeasures;
+import com.alpyuktug.covid_19.Fragments.FragmentNews;
+import com.alpyuktug.covid_19.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {
