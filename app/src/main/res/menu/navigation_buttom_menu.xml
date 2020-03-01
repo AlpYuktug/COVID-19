@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/ItemDashboard"
+        android:icon="?attr/actionModePasteDrawable"
+        android:title="@string/title_dashboard" />
+
+    <item
+        android:id="@+id/ItemNews"
+        android:icon="@android:drawable/stat_notify_chat"
+        android:title="@string/title_news" />
+
+    <item
+        android:id="@+id/ItemMeasures"
+        android:icon="@android:drawable/ic_dialog_alert"
+        android:title="@string/title_measures" />
+
+</menu>
