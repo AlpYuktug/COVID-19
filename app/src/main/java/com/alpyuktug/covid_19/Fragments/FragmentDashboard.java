@@ -18,7 +18,7 @@ import com.alpyuktug.covid_19.Models.CountriesList;
 import com.alpyuktug.covid_19.Models.Covid19Country;
 import com.alpyuktug.covid_19.R;
 import com.alpyuktug.covid_19.Services.ApiUtils;
-import com.alpyuktug.covid_19.Services.CountriesDAOInerface;
+import com.alpyuktug.covid_19.Services.AppDAOInerface;
 
 
 public class FragmentDashboard extends Fragment {
@@ -26,7 +26,7 @@ public class FragmentDashboard extends Fragment {
     public FragmentDashboard() {
     }
 
-    private CountriesDAOInerface countriesDIF;
+    private AppDAOInerface countriesDIF;
     private List<Covid19Country> Covid19CountryList;
 
     @Override
@@ -46,8 +46,7 @@ public class FragmentDashboard extends Fragment {
         return view;
     }
 
-    private void AllCaountries()
-    {
+    private void AllCaountries() {
         if(getString(R.string.language).contains("TR"))
         {
             countriesDIF.GetCountriesListTR().enqueue(new Callback<CountriesList>() {
@@ -91,5 +90,4 @@ public class FragmentDashboard extends Fragment {
             });
         }
     }
-
 }
