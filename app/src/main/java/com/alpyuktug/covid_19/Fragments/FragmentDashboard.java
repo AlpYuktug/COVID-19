@@ -20,14 +20,14 @@ import com.alpyuktug.covid_19.R;
 import com.alpyuktug.covid_19.Services.ApiUtils;
 import com.alpyuktug.covid_19.Services.CountriesDAOInerface;
 
+
 public class FragmentDashboard extends Fragment {
 
     public FragmentDashboard() {
     }
 
     private CountriesDAOInerface countriesDIF;
-    public List<Covid19Country> Covid19CountryList;
-
+    private List<Covid19Country> Covid19CountryList;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -42,6 +42,7 @@ public class FragmentDashboard extends Fragment {
 
         countriesDIF = ApiUtils.getCountriesDAOInerface();
         AllCaountries();
+
         return view;
     }
 
