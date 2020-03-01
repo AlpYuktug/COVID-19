@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">Coronavirus (COVID-19)</string>
+    <string name="language">EN</string>
+
     <string name="title_dashboard">Dashboard</string>
     <string name="title_news">News</string>
     <string name="title_measures">Take Measures</string>

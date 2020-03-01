@@ -8,5 +8,8 @@ import retrofit2.http.GET;
 public interface CountriesDAOInerface {
 
     @GET("api/COVID19/CountriesJSONTR.php")
-    Call<CountriesList> GetCountriesList();
+    Call<CountriesList> GetCountriesListTR();
+
+    @GET("api/COVID19/CountriesJSONEN.php")
+    Call<CountriesList> GetCountriesListEN();
 }

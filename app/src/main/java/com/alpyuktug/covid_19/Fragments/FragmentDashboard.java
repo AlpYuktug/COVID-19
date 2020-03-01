@@ -46,24 +46,50 @@ public class FragmentDashboard extends Fragment {
         return view;
     }
 
-    public void AllCaountries()
+    private void AllCaountries()
     {
-        countriesDIF.GetCountriesList().enqueue(new Callback<CountriesList>() {
+        if(getString(R.string.language).contains("TR"))
+        {
+            countriesDIF.GetCountriesListTR().enqueue(new Callback<CountriesList>() {
 
-            @Override
-            public void onResponse(Call<CountriesList> call, Response<CountriesList> response) {
-                Covid19CountryList = response.body().getCovid19Countries();
+                @Override
+                public void onResponse(Call<CountriesList> call, Response<CountriesList> response) {
 
-                for (Covid19Country c: Covid19CountryList)
-                {
-                    Log.e("Country Number",c.getCountryCode());
 
+                    Covid19CountryList = response.body().getCovid19Countries();
+
+                    for (Covid19Country c: Covid19CountryList)
+                    {
+                        Log.e("Country Number",c.getCountryCode());
+
+                    }
                 }
-            }
-            @Override
-            public void onFailure(Call<CountriesList> call, Throwable t) {
-            }
-        });
+                @Override
+                public void onFailure(Call<CountriesList> call, Throwable t) {
+                }
+            });
+        }
+        else
+        {
+            countriesDIF.GetCountriesListEN().enqueue(new Callback<CountriesList>() {
+
+                @Override
+                public void onResponse(Call<CountriesList> call, Response<CountriesList> response) {
+
+
+                    Covid19CountryList = response.body().getCovid19Countries();
+
+                    for (Covid19Country c: Covid19CountryList)
+                    {
+                        Log.e("Country Number",c.getCountryCode());
+
+                    }
+                }
+                @Override
+                public void onFailure(Call<CountriesList> call, Throwable t) {
+                }
+            });
+        }
     }
 
 }
