@@ -9,9 +9,19 @@ public class Covid19Country {
     @SerializedName("CountryNumber")
     @Expose
     private String countryNumber;
+
     @SerializedName("CountryCode")
     @Expose
     private String countryCode;
+
+    @SerializedName("CountryLatitude")
+    @Expose
+    private String countryLatitude;
+
+    @SerializedName("CountryLongitude")
+    @Expose
+    private String countryLongitude;
+
     @SerializedName("CountryName")
     @Expose
     private String countryName;
@@ -39,6 +49,22 @@ public class Covid19Country {
 
     public void setCountryCode(String countryCode) {
         this.countryCode = countryCode;
+    }
+
+    public String getCountryLatitude() {
+        return countryLatitude;
+    }
+
+    public void setCountryLatitude(String countryLongitude) {
+        this.countryLatitude = countryLatitude;
+    }
+
+    public String getCountryLongitude() {
+        return countryLongitude;
+    }
+
+    public void setCountryLongitude(String countryLongitude) {
+        this.countryLongitude = countryLongitude;
     }
 
     public String getCountryName() {

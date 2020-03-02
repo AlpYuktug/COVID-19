@@ -46,4 +46,9 @@ dependencies {
     implementation 'com.github.bluejamesbond:textjustify-android:2.1.6'
     implementation 'com.github.bumptech.glide:glide:4.11.0'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
+
+    implementation 'com.google.android.gms:play-services-cast:18.1.0'
+    implementation 'com.google.android.gms:play-services-cast-framework:18.1.0'
+    implementation 'com.google.android.gms:play-services-maps:17.0.0'
+
 }
