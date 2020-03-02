@@ -13,6 +13,8 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.alpyuktug.covid_19.Activities.MainActivity;
+import com.alpyuktug.covid_19.Fragments.FragmentNewsDetail;
 import com.alpyuktug.covid_19.Models.News;
 import com.alpyuktug.covid_19.R;
 import com.bumptech.glide.Glide;
@@ -60,13 +62,13 @@ public class RecylerViewAdapterNews extends RecyclerView.Adapter<RecylerViewAdap
                 editor.putString("NewsNumber",NewsList.get(position).getNewsNumber());
                 editor.commit();
 
-                /*
-                Fragment fragment = new FragmentHaberDetay();
-                FragmentManager fm = ((AnaMenu) context).getSupportFragmentManager();
+
+                Fragment fragment = new FragmentNewsDetail();
+                FragmentManager fm = ((MainActivity) context).getSupportFragmentManager();
                 FragmentTransaction ft = fm.beginTransaction();
-                ft.add(R.id.fragmenticerik, fragment);
+                ft.add(R.id.FragmentContent, fragment);
                 ft.commit();
-                */
+
 
             }
         });

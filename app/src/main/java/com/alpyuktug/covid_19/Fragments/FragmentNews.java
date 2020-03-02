@@ -80,7 +80,7 @@ public class FragmentNews extends Fragment {
         }
         else
         {
-            countriesDIF.GetNewsListTR().enqueue(new Callback<com.alpyuktug.covid_19.Models.NewsList>() {
+            countriesDIF.GetNewsListEN().enqueue(new Callback<com.alpyuktug.covid_19.Models.NewsList>() {
                 @Override
                 public void onResponse(Call<com.alpyuktug.covid_19.Models.NewsList> call, Response<com.alpyuktug.covid_19.Models.NewsList> response) {
                     NewsLists = response.body().getNews();

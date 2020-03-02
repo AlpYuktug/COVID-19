@@ -3,8 +3,12 @@ package com.alpyuktug.covid_19.Services;
 import com.alpyuktug.covid_19.Models.CountriesList;
 import com.alpyuktug.covid_19.Models.NewsList;
 
+import java.util.List;
+
 import retrofit2.Call;
 import retrofit2.http.GET;
+import retrofit2.http.Path;
+import retrofit2.http.Query;
 
 public interface AppDAOInerface {
 
@@ -18,5 +22,8 @@ public interface AppDAOInerface {
     Call<NewsList> GetNewsListTR();
 
     @GET("api/COVID19/NewsJSONEN.php")
-    Call<NewsList> GetNewsListtEN();
+    Call<NewsList> GetNewsListEN();
+
+    @GET("api/COVID19/NewsDetailsTR.php")
+    Call<NewsList> GetNewsListTRDetails(@Query("NewsNumber") String NewsNumber);
 }
