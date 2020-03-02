@@ -15,7 +15,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.alpyuktug.covid_19.Models.News;
 import com.alpyuktug.covid_19.R;
-import com.squareup.picasso.Picasso;
+import com.bumptech.glide.Glide;
 
 import java.util.List;
 
@@ -44,24 +44,20 @@ public class RecylerViewAdapterNews extends RecyclerView.Adapter<RecylerViewAdap
     @Override
     public void onBindViewHolder(RecylerViewAdapterNews.NewsViewHolder holder, final int position) {
 
-        //holder.imageViewHaberImage.setImageDrawable(NewsList.get(position).getHaberImage());
         holder.textViewNewsHead.setText(NewsList.get(position).getNewsHead());
         holder.textViewNewsNumber.setText(NewsList.get(position).getNewsNumber().toString());
 
         String Image = NewsList.get(position).getNewsImage();
-        Image = Image.replace("https","http");
 
-        Picasso.get()
-                .load(Image)
-                .into(holder.imageViewNewsImage);
+        Glide.with(context).load(Image).into(holder.imageViewNewsImage);
 
         holder.imageViewNewsImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                SharedPreferences sharedPref = context.getSharedPreferences("HaberIDDepo",Context.MODE_PRIVATE);
+                SharedPreferences sharedPref = context.getSharedPreferences("NewsNumberStock",Context.MODE_PRIVATE);
                 SharedPreferences.Editor editor = sharedPref.edit();
-                editor.putString("HaberNumara",NewsList.get(position).getNewsNumber());
+                editor.putString("NewsNumber",NewsList.get(position).getNewsNumber());
                 editor.commit();
 
                 /*

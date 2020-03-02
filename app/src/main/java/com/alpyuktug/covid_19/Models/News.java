@@ -22,6 +22,12 @@ public class News {
     @Expose
     private String newsImage;
 
+    public News(String newsNumber, String newsHead, String newsImage) {
+        this.newsNumber = newsNumber;
+        this.newsHead = newsHead;
+        this.newsImage = newsImage;
+    }
+
     public String getNewsNumber() {
         return newsNumber;
     }

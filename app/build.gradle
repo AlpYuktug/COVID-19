@@ -44,6 +44,6 @@ dependencies {
     implementation 'com.squareup.retrofit2:converter-gson:2.7.1'
 
     implementation 'com.github.bluejamesbond:textjustify-android:2.1.6'
-    implementation 'com.squareup.picasso:picasso:2.71828'
-
+    implementation 'com.github.bumptech.glide:glide:4.11.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
 }
