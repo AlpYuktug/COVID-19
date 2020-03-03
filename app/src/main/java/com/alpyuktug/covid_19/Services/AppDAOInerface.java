@@ -1,6 +1,7 @@
 package com.alpyuktug.covid_19.Services;
 
 import com.alpyuktug.covid_19.Models.CountriesList;
+import com.alpyuktug.covid_19.Models.ImageList;
 import com.alpyuktug.covid_19.Models.NewsList;
 
 import java.util.List;
@@ -26,4 +27,8 @@ public interface AppDAOInerface {
 
     @GET("api/COVID19/NewsDetailsTR.php")
     Call<NewsList> GetNewsListTRDetails(@Query("NewsNumber") String NewsNumber);
+
+    @GET("api/COVID19/MeasureJSONEN.php")
+    Call<ImageList> GetImageListEN();
+
 }
