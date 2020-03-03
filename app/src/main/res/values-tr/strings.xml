@@ -13,4 +13,9 @@
     <string name="WorldVirusCount">Dünya Üzerinde Toplam Vaka</string>
     <string name="WorldVirusDeadCount">Dünya Üzerinde Toplam Ölüm</string>
     <string name="WorldVirusRecovered">Dünya Üzerinde Toplam İyileşen</string>
+
+    <string name="About">Coronavirüs belirtileri nelerdir?
+                         Coronavirüs belirti veren bir hastalıktır. “Corona virüs” ya da “Corona virüsü” olarak da geçen coronavirüsün belirtileri şöyle sıralanabilir: Kuru öksürük, ateş, halsizlik, boğaz ağrısı, burun akıntısı, vücut ağrıları, zatürre, solunum sıkıntısı, nefes darlığı, ishal, bulantı, kusma, iştahsızlık.
+    </string>
+
 </resources>

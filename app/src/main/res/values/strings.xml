@@ -13,4 +13,6 @@
     <string name="WorldVirusCount">Total Cases of World</string>
     <string name="WorldVirusDeadCount">Total Deaths of World</string>
     <string name="WorldVirusRecovered">Total Recovered of World</string>
+
+    <string name="About">Total Cases of World</string>
 </resources>

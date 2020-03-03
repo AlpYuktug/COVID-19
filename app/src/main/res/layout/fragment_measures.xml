@@ -6,20 +6,42 @@
     android:layout_height="match_parent"
     android:background="@android:color/background_light">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/RecylerViewImages"
+    <com.bluejamesbond.text.DocumentView
+        android:id="@+id/DocumentViewAbout"
         android:layout_width="0dp"
-        android:layout_height="match_parent"
+        android:layout_height="0dp"
         android:layout_marginStart="12dp"
         android:layout_marginTop="12dp"
         android:layout_marginEnd="12dp"
         android:layout_marginBottom="12dp"
+        app:layout_constraintBottom_toTopOf="@+id/RecylerViewImages"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></com.bluejamesbond.text.DocumentView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/RecylerViewImages"
+        android:layout_width="0dp"
+        android:layout_height="350dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
         android:background="@android:color/background_light"
+        app:layout_constraintBottom_toTopOf="@+id/indicator"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <me.relex.circleindicator.CircleIndicator2
+        android:id="@+id/indicator"
+        android:layout_width="0dp"
+        android:layout_height="15dp"
+        android:layout_marginBottom="24dp"
+        app:ci_drawable="@drawable/point"
+        app:ci_gravity="center"
+        app:ci_height="5dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
