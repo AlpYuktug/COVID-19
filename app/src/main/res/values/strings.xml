@@ -9,4 +9,8 @@
     <string name="CountryVirusCount">Total Cases</string>
     <string name="CountryVirusDeadCount">Total Deaths</string>
     <string name="CountryVirusRecovered">Total Recovered</string>
+
+    <string name="WorldVirusCount">Total Cases of World</string>
+    <string name="WorldVirusDeadCount">Total Deaths of World</string>
+    <string name="WorldVirusRecovered">Total Recovered of World</string>
 </resources>

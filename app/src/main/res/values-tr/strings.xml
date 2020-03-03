@@ -8,5 +8,9 @@
 
     <string name="CountryVirusCount">Toplam Vaka</string>
     <string name="CountryVirusDeadCount">Toplam Ölüm</string>
-    <string name="CountryVirusRecovered">Toplam Kurtulan</string>
+    <string name="CountryVirusRecovered">Toplam İyileşen</string>
+
+    <string name="WorldVirusCount">Dünya Üzerinde Toplam Vaka</string>
+    <string name="WorldVirusDeadCount">Dünya Üzerinde Toplam Ölüm</string>
+    <string name="WorldVirusRecovered">Dünya Üzerinde Toplam İyileşen</string>
 </resources>

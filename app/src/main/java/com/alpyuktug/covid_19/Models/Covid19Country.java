@@ -8,7 +8,7 @@ public class Covid19Country {
 
     @SerializedName("CountryNumber")
     @Expose
-    private String countryNumber;
+    private int countryNumber;
 
     @SerializedName("CountryCode")
     @Expose
@@ -27,19 +27,19 @@ public class Covid19Country {
     private String countryName;
     @SerializedName("CountryVirusCount")
     @Expose
-    private String countryVirusCount;
+    private int countryVirusCount;
     @SerializedName("CountryVirusDeadCount")
     @Expose
-    private String countryVirusDeadCount;
+    private int countryVirusDeadCount;
     @SerializedName("CountryVirusRecoveredCount")
     @Expose
-    private String countryVirusRecoveredCount;
+    private int countryVirusRecoveredCount;
 
-    public String getCountryNumber() {
+    public int getCountryNumber() {
         return countryNumber;
     }
 
-    public void setCountryNumber(String countryNumber) {
+    public void setCountryNumber(int countryNumber) {
         this.countryNumber = countryNumber;
     }
 
@@ -75,27 +75,27 @@ public class Covid19Country {
         this.countryName = countryName;
     }
 
-    public String getCountryVirusCount() {
+    public int getCountryVirusCount() {
         return countryVirusCount;
     }
 
-    public void setCountryVirusCount(String countryVirusCount) {
+    public void setCountryVirusCount(int countryVirusCount) {
         this.countryVirusCount = countryVirusCount;
     }
 
-    public String getCountryVirusDeadCount() {
+    public int getCountryVirusDeadCount() {
         return countryVirusDeadCount;
     }
 
-    public void setCountryVirusDeadCount(String countryVirusDeadCount) {
+    public void setCountryVirusDeadCount(int countryVirusDeadCount) {
         this.countryVirusDeadCount = countryVirusDeadCount;
     }
 
-    public String getCountryVirusRecoveredCount() {
+    public int getCountryVirusRecoveredCount() {
         return countryVirusRecoveredCount;
     }
 
-    public void setCountryVirusRecoveredCount(String countryVirusRecoveredCount) {
+    public void setCountryVirusRecoveredCount(int countryVirusRecoveredCount) {
         this.countryVirusRecoveredCount = countryVirusRecoveredCount;
     }
 

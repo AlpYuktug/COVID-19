@@ -34,6 +34,7 @@ import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapView;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
@@ -51,14 +52,19 @@ public class FragmentDashboard extends Fragment{
 
     List<LatLng> AllCountryCoord = new ArrayList<LatLng>();
 
-    List<String> AllCountryVirusCount = new ArrayList<String>();
-    List<String> AllCountryVirusDeadCount = new ArrayList<String>();
-    List<String> AllCountryVirusRecovered = new ArrayList<String>();
+    List<Integer> AllCountryVirusCount = new ArrayList<Integer>();
+    List<Integer> AllCountryVirusDeadCount = new ArrayList<Integer>();
+    List<Integer> AllCountryVirusRecovered = new ArrayList<Integer>();
+    List<String> CountriesName = new ArrayList<String>();
 
-    GoogleMap mapView;
     SupportMapFragment mapFragment;
 
     String VirusCount,VirusDeadCount,VirusRecovered;
+    String WorldVirusCount,WorldVirusDeadCount,WorldVirusRecovered;
+
+    int TotalVirus=0, TotalDead=0, TotalRecover=0;
+
+    TextView textViewAll,textViewDeath,textViewRecover;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -75,21 +81,21 @@ public class FragmentDashboard extends Fragment{
         VirusDeadCount = getContext().getResources().getString(R.string.CountryVirusDeadCount);
         VirusRecovered = getContext().getResources().getString(R.string.CountryVirusRecovered);
 
+        WorldVirusCount = getContext().getResources().getString(R.string.WorldVirusCount);
+        WorldVirusDeadCount = getContext().getResources().getString(R.string.WorldVirusDeadCount);
+        WorldVirusRecovered = getContext().getResources().getString(R.string.WorldVirusRecovered);
+
+        textViewAll = view.findViewById(R.id.textViewAll);
+        textViewDeath = view.findViewById(R.id.textViewDeath);
+        textViewRecover = view.findViewById(R.id.textViewRecover);
+
         mapFragment = (SupportMapFragment) getChildFragmentManager().findFragmentById(R.id.mapView);  //use SuppoprtMapFragment for using in fragment instead of activity  MapFragment = activity   SupportMapFragment = fragment
         mapFragment.getMapAsync(new OnMapReadyCallback() {
             @Override
             public void onMapReady(GoogleMap mMap) {
-
                 mMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
                 mMap.getUiSettings().setZoomGesturesEnabled(false);
-
                 mMap.clear();
-
-                mMap.addMarker(new MarkerOptions()
-                        .position(new LatLng(37.4629101,-122.2449094))
-                        .title("Iron Man")
-                        .snippet("His Talent : Plenty of money"));
-
             }
         });
 
@@ -103,10 +109,8 @@ public class FragmentDashboard extends Fragment{
         if(getString(R.string.language).contains("TR"))
         {
             countriesDIF.GetCountriesListTR().enqueue(new Callback<CountriesList>() {
-
                 @Override
                 public void onResponse(Call<CountriesList> call, Response<CountriesList> response) {
-
 
                     Covid19CountryList = response.body().getCovid19Countries();
 
@@ -115,17 +119,27 @@ public class FragmentDashboard extends Fragment{
                         Double CountryLatitude = c.getCountryLatitude();
                         Double CountryLongitude = c.getCountryLongitude();
 
-                        String CountryVirusCount =  c.getCountryVirusCount();
-                        String CountryVirusDeadCount =  c.getCountryVirusDeadCount();
-                        String CountryVirusRecovered =  c.getCountryVirusRecoveredCount();
+                        String CountryName = c.getCountryName();
+                        int CountryVirusCount =  c.getCountryVirusCount();
+                        int CountryVirusDeadCount =  c.getCountryVirusDeadCount();
+                        int CountryVirusRecovered =  c.getCountryVirusRecoveredCount();
 
                         AllCountryVirusCount.add(CountryVirusCount);
                         AllCountryVirusDeadCount.add(CountryVirusDeadCount);
                         AllCountryVirusRecovered.add(CountryVirusRecovered);
+                        CountriesName.add(CountryName);
 
                         LatLng CountryCoord = new LatLng(CountryLatitude, CountryLongitude);
                         AllCountryCoord.add(CountryCoord);
+
+                        TotalVirus = TotalVirus + CountryVirusCount;
+                        TotalDead = TotalDead + CountryVirusDeadCount;
+                        TotalRecover = TotalRecover + CountryVirusRecovered;
                     }
+
+                    textViewAll.setText(WorldVirusCount + ":" + String.valueOf(TotalVirus));
+                    textViewDeath.setText(WorldVirusDeadCount + ":" + String.valueOf(TotalDead));
+                    textViewRecover.setText(WorldVirusRecovered + ":" + String.valueOf(TotalRecover));
 
                     mapFragment.getMapAsync(new OnMapReadyCallback() {
                         @Override
@@ -169,20 +183,19 @@ public class FragmentDashboard extends Fragment{
 
                             mMap.clear();
 
-                            /*
-                            int height = 80;
-                            int width = 80;
-                            BitmapDrawable bitmapdraw = (BitmapDrawable) getResources().getDrawable(R.drawable.bordoarac);
+                            int height = 58;
+                            int width = 58;
+                            BitmapDrawable bitmapdraw = (BitmapDrawable) getResources().getDrawable(R.drawable.bacteria);
                             Bitmap b = bitmapdraw.getBitmap();
-                            Bitmap smallMarker = Bitmap.createScaledBitmap(b, width, height, false);
-*/
+                            Bitmap bacteria = Bitmap.createScaledBitmap(b, width, height, false);
 
                             for (int i=0; i < AllCountryCoord.size(); i++)
                             {
                                 mMap.addMarker(new MarkerOptions()
                                         .position(AllCountryCoord.get(i))
-                                        .title("COVID-19")
-                                        .snippet(VirusCount +" : "+AllCountryVirusCount.get(i)+ "\n" + VirusDeadCount +" : "+AllCountryVirusDeadCount.get(i) + "\n"  + VirusRecovered +" : "+AllCountryVirusRecovered.get(i)   ));
+                                        .title(CountriesName.get(i))
+                                        .snippet(VirusCount +" : "+AllCountryVirusCount.get(i)+ "\n" + VirusDeadCount +" : "+AllCountryVirusDeadCount.get(i) + "\n"  + VirusRecovered +" : "+AllCountryVirusRecovered.get(i))
+                                        .icon(BitmapDescriptorFactory.fromBitmap(bacteria)));
                             }
                         }
                     });
@@ -195,18 +208,97 @@ public class FragmentDashboard extends Fragment{
         else
         {
             countriesDIF.GetCountriesListEN().enqueue(new Callback<CountriesList>() {
-
                 @Override
                 public void onResponse(Call<CountriesList> call, Response<CountriesList> response) {
-
 
                     Covid19CountryList = response.body().getCovid19Countries();
 
                     for (Covid19Country c: Covid19CountryList)
                     {
-                        Log.e("Country Number",c.getCountryCode());
+                        Double CountryLatitude = c.getCountryLatitude();
+                        Double CountryLongitude = c.getCountryLongitude();
 
+                        String CountryName = c.getCountryName();
+                        int CountryVirusCount =  c.getCountryVirusCount();
+                        int CountryVirusDeadCount =  c.getCountryVirusDeadCount();
+                        int CountryVirusRecovered =  c.getCountryVirusRecoveredCount();
+
+                        AllCountryVirusCount.add(CountryVirusCount);
+                        AllCountryVirusDeadCount.add(CountryVirusDeadCount);
+                        AllCountryVirusRecovered.add(CountryVirusRecovered);
+                        CountriesName.add(CountryName);
+
+                        LatLng CountryCoord = new LatLng(CountryLatitude, CountryLongitude);
+                        AllCountryCoord.add(CountryCoord);
+
+                        TotalVirus = TotalVirus + CountryVirusCount;
+                        TotalDead = TotalDead + CountryVirusDeadCount;
+                        TotalRecover = TotalRecover + CountryVirusRecovered;
                     }
+
+                    textViewAll.setText(WorldVirusCount + ":" + String.valueOf(TotalVirus));
+                    textViewDeath.setText(WorldVirusDeadCount + ":" + String.valueOf(TotalDead));
+                    textViewRecover.setText(WorldVirusRecovered + ":" + String.valueOf(TotalRecover));
+
+                    mapFragment.getMapAsync(new OnMapReadyCallback() {
+                        @Override
+                        public void onMapReady(GoogleMap mMap) {
+
+                            mMap.setInfoWindowAdapter(new GoogleMap.InfoWindowAdapter() {
+                                @Override
+                                public View getInfoWindow(Marker marker) {
+                                    return null;
+                                }
+
+                                @Override
+                                public View getInfoContents(Marker marker) {
+
+                                    Context mContext = getContext();
+
+                                    LinearLayout Info = new LinearLayout(mContext);
+                                    Info.setOrientation(LinearLayout.VERTICAL);
+
+                                    TextView Title = new TextView(mContext);
+                                    Title.setTextColor(Color.BLACK);
+                                    Title.setGravity(Gravity.CENTER);
+                                    Title.setTextSize(20);
+                                    Title.setTypeface(null, Typeface.BOLD);
+                                    Title.setText(marker.getTitle());
+
+                                    TextView Snippet = new TextView(mContext);
+                                    Snippet.setTextColor(Color.BLACK);
+                                    Snippet.setTextSize(20);
+                                    Snippet.setText(marker.getSnippet());
+
+                                    Info.addView(Title);
+                                    Info.addView(Snippet);
+
+                                    return Info;
+                                }
+                            });
+
+                            mMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
+                            mMap.getUiSettings().setZoomGesturesEnabled(false);
+
+                            mMap.clear();
+
+
+                            int height = 58;
+                            int width = 58;
+                            BitmapDrawable bitmapdraw = (BitmapDrawable) getResources().getDrawable(R.drawable.bacteria);
+                            Bitmap b = bitmapdraw.getBitmap();
+                            Bitmap bacteria = Bitmap.createScaledBitmap(b, width, height, false);
+
+                            for (int i=0; i < AllCountryCoord.size(); i++)
+                            {
+                                mMap.addMarker(new MarkerOptions()
+                                        .position(AllCountryCoord.get(i))
+                                        .title(CountriesName.get(i))
+                                        .snippet(VirusCount +" : "+AllCountryVirusCount.get(i)+ "\n" + VirusDeadCount +" : "+AllCountryVirusDeadCount.get(i) + "\n"  + VirusRecovered +" : "+AllCountryVirusRecovered.get(i))
+                                        .icon(BitmapDescriptorFactory.fromBitmap(bacteria)));
+                            }
+                        }
+                    });
                 }
                 @Override
                 public void onFailure(Call<CountriesList> call, Throwable t) {
