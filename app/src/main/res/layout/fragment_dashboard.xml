@@ -15,10 +15,12 @@
 
     <TextView
         android:id="@+id/textViewAll"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
         android:layout_marginTop="48dp"
-        android:textColor="@color/cast_intro_overlay_background_color"
+        android:layout_marginEnd="32dp"
+        android:textColor="@color/design_default_color_secondary_variant"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -28,10 +30,10 @@
 
     <TextView
         android:id="@+id/textViewDeath"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:textColor="@color/design_default_color_error"
+        android:textColor="@color/design_default_color_secondary_variant"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/textViewAll"
@@ -40,10 +42,10 @@
 
     <TextView
         android:id="@+id/textViewRecover"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:textColor="@color/colorPrimary"
+        android:textColor="@color/design_default_color_secondary_variant"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/textViewDeath"
@@ -66,6 +68,8 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="32dp"
         android:text="@string/List"
+        android:textColor="@color/cast_expanded_controller_ad_in_progress_text_color"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/imageViewGetList"
         app:layout_constraintStart_toStartOf="@+id/imageViewGetList" />
