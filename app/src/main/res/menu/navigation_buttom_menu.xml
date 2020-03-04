@@ -2,18 +2,21 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/ItemDashboard"
-        android:icon="?attr/actionModePasteDrawable"
-        android:title="@string/title_dashboard" />
+        android:id="@+id/ItemNews"
+        android:icon="@drawable/news"
+        android:title="@string/title_news"
+        android:visible="true" />
 
     <item
-        android:id="@+id/ItemNews"
-        android:icon="@android:drawable/stat_notify_chat"
-        android:title="@string/title_news" />
+        android:id="@+id/ItemDashboard"
+        android:icon="@drawable/worldbacteria"
+        android:title="@string/title_dashboard"
+        android:visible="true" />
 
     <item
         android:id="@+id/ItemMeasures"
-        android:icon="@android:drawable/ic_dialog_alert"
-        android:title="@string/title_measures" />
+        android:icon="@drawable/info"
+        android:title="@string/title_measures"
+        android:visible="true" />
 
 </menu>
