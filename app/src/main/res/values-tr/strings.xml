@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">Koronavirüs (COVID-19)</string>
 
+    <string name="List">Listede Gör</string>
+
     <string name="language">TR</string>
     <string name="title_dashboard">Genel Durum</string>
     <string name="title_news">Haberler</string>

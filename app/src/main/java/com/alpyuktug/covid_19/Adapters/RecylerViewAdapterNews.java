@@ -62,14 +62,11 @@ public class RecylerViewAdapterNews extends RecyclerView.Adapter<RecylerViewAdap
                 editor.putString("NewsNumber",NewsList.get(position).getNewsNumber());
                 editor.commit();
 
-
                 Fragment fragment = new FragmentNewsDetail();
                 FragmentManager fm = ((MainActivity) context).getSupportFragmentManager();
                 FragmentTransaction ft = fm.beginTransaction();
                 ft.add(R.id.FragmentContent, fragment);
                 ft.commit();
-
-
             }
         });
 

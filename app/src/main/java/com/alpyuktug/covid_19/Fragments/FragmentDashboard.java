@@ -11,10 +11,13 @@ import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -65,6 +68,7 @@ public class FragmentDashboard extends Fragment{
     int TotalVirus=0, TotalDead=0, TotalRecover=0;
 
     TextView textViewAll,textViewDeath,textViewRecover;
+    ImageView imageViewGetList;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -88,6 +92,7 @@ public class FragmentDashboard extends Fragment{
         textViewAll = view.findViewById(R.id.textViewAll);
         textViewDeath = view.findViewById(R.id.textViewDeath);
         textViewRecover = view.findViewById(R.id.textViewRecover);
+        imageViewGetList = view.findViewById(R.id.imageViewGetList);
 
         mapFragment = (SupportMapFragment) getChildFragmentManager().findFragmentById(R.id.mapView);  //use SuppoprtMapFragment for using in fragment instead of activity  MapFragment = activity   SupportMapFragment = fragment
         mapFragment.getMapAsync(new OnMapReadyCallback() {
@@ -101,6 +106,17 @@ public class FragmentDashboard extends Fragment{
 
         countriesDIF = ApiUtils.getCountriesDAOInerface();
         AllCaountries();
+
+        imageViewGetList.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if ( v == imageViewGetList)
+                {
+                    Fragment fragment = new FragmentCountryList();
+                    getFragmentManager().beginTransaction().replace(R.id.FragmentContent, fragment).commit();
+                }
+            }
+        });
 
         return view;
     }

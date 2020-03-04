@@ -58,7 +58,7 @@ public class FragmentCountryList extends Fragment {
 
         RecylerViewCountryList = (RecyclerView) view.findViewById(R.id.RecylerViewCountryList);
         RecylerViewCountryList.setHasFixedSize(true);
-        RecylerViewCountryList.setLayoutManager(new StaggeredGridLayoutManager(1,StaggeredGridLayoutManager.HORIZONTAL));
+        RecylerViewCountryList.setLayoutManager(new StaggeredGridLayoutManager(1,StaggeredGridLayoutManager.VERTICAL));
 
         countriesDIF = ApiUtils.getCountriesDAOInerface();
         AllCaountries();

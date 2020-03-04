@@ -10,8 +10,8 @@
         android:name="com.google.android.gms.maps.SupportMapFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:layout_editor_absoluteX="53dp"
-        tools:layout_editor_absoluteY="-27dp" />
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp" />
 
     <TextView
         android:id="@+id/textViewAll"
@@ -49,5 +49,25 @@
         app:layout_constraintEnd_toEndOf="@+id/textViewDeath"
         app:layout_constraintStart_toStartOf="@+id/textViewDeath"
         app:layout_constraintTop_toBottomOf="@+id/textViewDeath" />
+
+    <ImageView
+        android:id="@+id/imageViewGetList"
+        android:layout_width="88dp"
+        android:layout_height="88dp"
+        app:layout_constraintBottom_toTopOf="@+id/textViewList"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/list" />
+
+    <TextView
+        android:id="@+id/textViewList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:text="@string/List"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/imageViewGetList"
+        app:layout_constraintStart_toStartOf="@+id/imageViewGetList" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

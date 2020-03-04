@@ -47,9 +47,9 @@ public class RecylerViewAdapterCountry extends RecyclerView.Adapter<RecylerViewA
     public void onBindViewHolder(RecylerViewAdapterCountry.CountryViewHolder holder, final int position) {
 
         holder.textViewName.setText(CountryList.get(position).getCountryName());
-        holder.textViewTotal.setText(CountryList.get(position).getCountryVirusCount());
-        holder.textViewDead.setText(CountryList.get(position).getCountryVirusDeadCount());
-        holder.textViewRecover.setText(CountryList.get(position).getCountryVirusRecoveredCount());
+        holder.textViewTotal.setText(String.valueOf(CountryList.get(position).getCountryVirusCount()));
+        holder.textViewDead.setText(String.valueOf(CountryList.get(position).getCountryVirusDeadCount()));
+        holder.textViewRecover.setText(String.valueOf(CountryList.get(position).getCountryVirusRecoveredCount()));
 
     }
 
