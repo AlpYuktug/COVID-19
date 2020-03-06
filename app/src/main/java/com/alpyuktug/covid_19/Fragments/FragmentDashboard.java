@@ -293,7 +293,7 @@ public class FragmentDashboard extends Fragment{
                                 }
                             });
 
-                            mMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
+                            mMap.setMapType(GoogleMap.MAP_TYPE_SATELLITE);
                             mMap.getUiSettings().setZoomGesturesEnabled(false);
 
                             mMap.clear();

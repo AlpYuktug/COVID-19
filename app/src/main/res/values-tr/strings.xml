@@ -16,8 +16,13 @@
     <string name="WorldVirusDeadCount">Dünya Üzerinde Toplam Ölüm</string>
     <string name="WorldVirusRecovered">Dünya Üzerinde Toplam İyileşen</string>
 
-    <string name="About">   Coronavirüs belirtileri nelerdir?
-                         /t/n Coronavirüs belirti veren bir hastalıktır. “Corona virüs” ya da “Corona virüsü” olarak da geçen coronavirüsün belirtileri şöyle sıralanabilir: /nKuru öksürük, ateş, halsizlik, boğaz ağrısı, burun akıntısı, vücut ağrıları, zatürre, solunum sıkıntısı, nefes darlığı, ishal, bulantı, kusma, iştahsızlık.
-    </string>
+    <string name="About">
+\n
+Nasıl Bulaşır?
+\n\nYeni Coronavirusun, diğer Coronaviruslar gibi solunum salgıları ile bulaştığı düşünülmektedir. Hasta kişilerden öksürük, hapşırık, gülme, konuşma sırasında çevreye saçılan virus içeren solunum salgısı damlacıkları, sağlam kişilerin mukozalarına temas ederek bu kişilerin hastalanmasına neden olur. Hastalığın bu şekilde insandan insana bulaşması için yakın temas (1 metreden yakın) gereklidir.
+\n\n
+Belirtileri Nelerdir ve Tanısı Nasıl Konulur?
+\n\nÜst solunum yolu hastalıkları belirtilerinden bazıları olan burun akıntısı, öksürük, boğaz ağrısı ve ateş virüsün belirtilerindendir. Bu belirtilere ilaveten COVID-19 nısı için, son 14 günde hastalığın görüldüğü ülkelerden(Çin, Kore gibi uzak doğu ülkeleri, İran vb) gelmiş olmak yada hasta biriyle yakın temas öyküsü olması gerekmektedir. Bu virüsler bazen zatürre gibi alt solunum yolu hastalıklarına yol açabilir. Bu durum kalp-akciğer hastalarında, bağışıklık sistemleri yetersiz kişilerde veya yaşlılarda daha sık görülür. Virüsün teşhisi için klinik belirtileri hafif olduğundan laboratuvar testleri genellikle çok sık kullanılmaz. Ancak hekim gerek gördüğünde polimeraz zincir reaksiyonu (PCR) ile virüsün genetik parmak izine bakılan  laboratuvar testleri kullanılabilir.
+</string>
 
 </resources>

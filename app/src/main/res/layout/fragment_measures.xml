@@ -6,42 +6,61 @@
     android:layout_height="match_parent"
     android:background="@android:color/background_light">
 
-    <com.bluejamesbond.text.DocumentView
-        android:id="@+id/DocumentViewAbout"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="12dp"
-        android:layout_marginBottom="12dp"
-        app:layout_constraintBottom_toTopOf="@+id/RecylerViewImages"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"></com.bluejamesbond.text.DocumentView>
-
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/RecylerViewImages"
         android:layout_width="0dp"
         android:layout_height="350dp"
         android:layout_marginStart="12dp"
+        android:layout_marginTop="24dp"
         android:layout_marginEnd="12dp"
         android:background="@android:color/background_light"
-        app:layout_constraintBottom_toTopOf="@+id/indicator"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <me.relex.circleindicator.CircleIndicator2
         android:id="@+id/indicator"
         android:layout_width="0dp"
         android:layout_height="15dp"
-        android:layout_marginBottom="24dp"
         app:ci_drawable="@drawable/point"
         app:ci_gravity="center"
         app:ci_height="5dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/RecylerViewImages"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="@+id/RecylerViewImages"
+        app:layout_constraintTop_toBottomOf="@+id/RecylerViewImages" >
+
+    </me.relex.circleindicator.CircleIndicator2>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="12dp"
+        android:background="@drawable/infotextback"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/RecylerViewImages"
+        app:layout_constraintStart_toStartOf="@+id/RecylerViewImages"
+        app:layout_constraintTop_toBottomOf="@+id/indicator">
+
+        <com.bluejamesbond.text.DocumentView
+            android:id="@+id/DocumentViewAbout"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="33dp"
+            android:layout_marginBottom="24dp"
+            android:background="#B6D1DB"
+            app:documentView_textColor="@color/green_active"
+            app:documentView_textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        </com.bluejamesbond.text.DocumentView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
