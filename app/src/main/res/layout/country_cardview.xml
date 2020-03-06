@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/CountryCardBaseConst"
     android:layout_width="match_parent"
-    android:layout_height="120dp">
+    android:layout_height="120dp"
+    android:background="#31464E">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/CardViewCountry"
@@ -14,57 +15,74 @@
         android:layout_marginTop="6dp"
         android:layout_marginEnd="6dp"
         android:layout_marginBottom="6dp"
+        android:background="#31464E"
+        app:cardCornerRadius="0dp"
+        app:cardElevation="0dp"
+        app:cardMaxElevation="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" >
+        app:layout_constraintTop_toTopOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/CountryCardChildConst"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@color/cardview_light_background">
+            android:background="@drawable/countrylistback">
 
             <TextView
                 android:id="@+id/textViewName"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="60dp"
-                android:layout_marginTop="18dp"
-                android:layout_marginEnd="60dp"
-                android:gravity="center_horizontal"
-                android:textColor="@color/cast_expanded_controller_background_color"
-                android:textSize="18sp"
-                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_width="80dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="36dp"
+                android:layout_marginBottom="36dp"
+                android:gravity="center"
+                android:textColor="@color/cast_expanded_controller_ad_label_text_color"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/textViewTotal"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:textColor="@color/cast_expanded_controller_background_color"
-                app:layout_constraintEnd_toEndOf="@+id/textViewName"
-                app:layout_constraintStart_toStartOf="@+id/textViewName"
-                app:layout_constraintTop_toBottomOf="@+id/textViewName" />
-
-            <TextView
                 android:id="@+id/textViewDead"
-                android:layout_width="0dp"
+                android:layout_width="50dp"
                 android:layout_height="wrap_content"
-                android:textColor="@color/cast_expanded_controller_background_color"
-                app:layout_constraintEnd_toEndOf="@+id/textViewTotal"
-                app:layout_constraintStart_toStartOf="@+id/textViewTotal"
-                app:layout_constraintTop_toBottomOf="@+id/textViewTotal" />
+                android:textColor="@color/cast_expanded_controller_ad_label_text_color"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/textViewTotal"
+                app:layout_constraintEnd_toStartOf="@+id/textViewRecover"
+                app:layout_constraintStart_toEndOf="@+id/textViewTotal"
+                app:layout_constraintTop_toTopOf="@+id/textViewTotal"
+                app:layout_constraintVertical_bias="0.0" />
 
             <TextView
                 android:id="@+id/textViewRecover"
-                android:layout_width="0dp"
+                android:layout_width="50dp"
                 android:layout_height="wrap_content"
-                android:textColor="@color/cast_expanded_controller_background_color"
-                app:layout_constraintEnd_toEndOf="@+id/textViewDead"
-                app:layout_constraintStart_toStartOf="@+id/textViewDead"
-                app:layout_constraintTop_toBottomOf="@+id/textViewDead" />
+                android:layout_marginEnd="16dp"
+                android:textColor="@color/cast_expanded_controller_ad_label_text_color"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/textViewDead"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/textViewDead"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/textViewTotal"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:textColor="@color/cast_expanded_controller_ad_label_text_color"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/textViewName"
+                app:layout_constraintStart_toEndOf="@+id/textViewName"
+                app:layout_constraintTop_toTopOf="@+id/textViewName"
+                app:layout_constraintVertical_bias="0.512" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.cardview.widget.CardView>
