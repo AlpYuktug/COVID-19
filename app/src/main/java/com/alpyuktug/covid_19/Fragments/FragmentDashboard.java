@@ -153,9 +153,9 @@ public class FragmentDashboard extends Fragment{
                         TotalRecover = TotalRecover + CountryVirusRecovered;
                     }
 
-                    textViewAll.setText(WorldVirusCount + ":" + String.valueOf(TotalVirus));
-                    textViewDeath.setText(WorldVirusDeadCount + ":" + String.valueOf(TotalDead));
-                    textViewRecover.setText(WorldVirusRecovered + ":" + String.valueOf(TotalRecover));
+                    textViewAll.setText(WorldVirusCount + " : " + String.valueOf(TotalVirus));
+                    textViewDeath.setText(WorldVirusDeadCount + " : " + String.valueOf(TotalDead));
+                    textViewRecover.setText(WorldVirusRecovered + " : " + String.valueOf(TotalRecover));
 
                     mapFragment.getMapAsync(new OnMapReadyCallback() {
                         @Override
