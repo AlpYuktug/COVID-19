@@ -20,8 +20,8 @@
         android:roundIcon="@drawable/virusmasp"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Activities.MainActivity"  />
-        <activity android:name=".Activities.SplashActivity">
+        <activity android:name=".Activities.MainActivity" android:screenOrientation="locked"  />
+        <activity android:name=".Activities.SplashActivity" android:screenOrientation="locked" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
