@@ -52,7 +52,7 @@
             android:layout_marginEnd="33dp"
             android:layout_marginBottom="24dp"
             android:background="#B6D1DB"
-            app:documentView_textColor="@color/green_active"
+            app:documentView_textColor="@color/cast_libraries_material_featurehighlight_outer_highlight_default_color"
             app:documentView_textSize="15sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

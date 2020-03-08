@@ -19,7 +19,7 @@
         android:layout_height="88dp"
         app:layout_constraintBottom_toTopOf="@+id/textViewList"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.913"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/list" />
 
@@ -28,6 +28,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="32dp"
+        android:background="@color/cast_expanded_controller_seek_bar_progress_background_tint_color"
         android:text="@string/List"
         android:textColor="@color/cast_expanded_controller_ad_in_progress_text_color"
         android:textSize="18sp"

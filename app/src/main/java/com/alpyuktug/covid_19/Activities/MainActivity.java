@@ -10,7 +10,11 @@ import androidx.fragment.app.FragmentTransaction;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.util.DisplayMetrics;
+import android.util.TypedValue;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Toast;
 
 import com.alpyuktug.covid_19.Fragments.FragmentDashboard;
@@ -19,6 +23,7 @@ import com.alpyuktug.covid_19.Fragments.FragmentDashboard;
 import com.alpyuktug.covid_19.Fragments.FragmentMeasures;
 import com.alpyuktug.covid_19.Fragments.FragmentNews;
 import com.alpyuktug.covid_19.R;
+import com.google.android.material.bottomnavigation.BottomNavigationMenuView;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
 import com.luseen.spacenavigation.SpaceItem;
@@ -36,6 +41,8 @@ public class MainActivity extends AppCompatActivity {
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.bottomNavigationView);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
         navigation.setItemIconTintList(null);
+        navigation.setSelectedItemId(R.id.ItemDashboard);
+
 
         Fragment fragment = new FragmentDashboard();
 

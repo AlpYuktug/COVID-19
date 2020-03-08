@@ -84,4 +84,12 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.0" />
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/imageViewDashboard"
+        android:layout_width="119dp"
+        android:layout_height="83dp"
+        app:layout_constraintBottom_toBottomOf="@+id/RecylerViewCountryList"
+        app:layout_constraintEnd_toEndOf="@+id/RecylerViewCountryList"
+        app:srcCompat="@drawable/virusmasp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

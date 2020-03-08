@@ -1,5 +1,6 @@
 package com.alpyuktug.covid_19.Fragments;
 
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
@@ -7,11 +8,13 @@ import android.os.StrictMode;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 
+import com.alpyuktug.covid_19.Activities.MainActivity;
 import com.alpyuktug.covid_19.Adapters.RecylerViewAdapterCountry;
 import com.alpyuktug.covid_19.Models.CountriesList;
 import com.alpyuktug.covid_19.Models.Covid19Country;
@@ -42,6 +45,8 @@ public class FragmentCountryList extends Fragment {
     public RecyclerView RecylerViewCountryList;
     public RecylerViewAdapterCountry CountryAdapter;
 
+    public ImageView imageViewDashboard;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -55,6 +60,15 @@ public class FragmentCountryList extends Fragment {
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder()
                 .permitAll().build();
         StrictMode.setThreadPolicy(policy);
+
+        imageViewDashboard = view.findViewById(R.id.imageViewDashboard);
+        imageViewDashboard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), MainActivity.class);
+                startActivity(intent);
+            }
+        });
 
         RecylerViewCountryList = (RecyclerView) view.findViewById(R.id.RecylerViewCountryList);
         RecylerViewCountryList.setHasFixedSize(true);

@@ -4,9 +4,9 @@
     <string name="List">Listede Gör</string>
 
     <string name="language">TR</string>
-    <string name="title_dashboard">Genel Durum</string>
+    <string name="title_dashboard">Virüs Haritası</string>
     <string name="title_news">Haberler</string>
-    <string name="title_measures">Alınacak Önlemler</string>
+    <string name="title_measures">Önlemler</string>
 
     <string name="CountryVirusCount">Toplam Vaka</string>
     <string name="CountryVirusDeadCount">Toplam Ölüm</string>

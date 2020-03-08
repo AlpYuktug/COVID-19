@@ -9,13 +9,13 @@
 
     <item
         android:id="@+id/ItemDashboard"
-        android:icon="@drawable/worldbacteria"
+        android:icon="@drawable/virusmasp"
         android:title="@string/title_dashboard"
         android:visible="true" />
 
     <item
         android:id="@+id/ItemMeasures"
-        android:icon="@drawable/info"
+        android:icon="@drawable/information"
         android:title="@string/title_measures"
         android:visible="true" />
 
