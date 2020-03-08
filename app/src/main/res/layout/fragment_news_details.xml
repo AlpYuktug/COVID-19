@@ -24,9 +24,9 @@
     <TextView
         android:id="@+id/textViewNewsLongHead"
         android:layout_width="0dp"
-        android:layout_height="20dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:gravity="center"
+        android:gravity="center_vertical"
         android:justificationMode="inter_word"
         android:textColor="#2C5696"
         android:textSize="18sp"
