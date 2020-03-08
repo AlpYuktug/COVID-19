@@ -50,7 +50,7 @@
             android:layout_marginStart="24dp"
             android:layout_marginTop="24dp"
             android:layout_marginEnd="33dp"
-            android:layout_marginBottom="24dp"
+            android:layout_marginBottom="34dp"
             android:background="#B6D1DB"
             app:documentView_textColor="@color/cast_libraries_material_featurehighlight_outer_highlight_default_color"
             app:documentView_textSize="15sp"
