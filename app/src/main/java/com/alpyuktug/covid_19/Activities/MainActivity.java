@@ -9,6 +9,10 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.app.Activity;
+import android.content.Context;
+import android.content.Intent;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.util.TypedValue;
@@ -43,13 +47,12 @@ public class MainActivity extends AppCompatActivity {
         navigation.setItemIconTintList(null);
         navigation.setSelectedItemId(R.id.ItemDashboard);
 
+            Fragment fragment = new FragmentDashboard();
 
-        Fragment fragment = new FragmentDashboard();
-
-        getSupportFragmentManager()
-                .beginTransaction()
-                .replace(R.id.FragmentContent, fragment)
-                .commit();
+            getSupportFragmentManager()
+                    .beginTransaction()
+                    .replace(R.id.FragmentContent, fragment)
+                    .commit();
     }
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
@@ -84,4 +87,5 @@ public class MainActivity extends AppCompatActivity {
         transaction.addToBackStack(null);
         transaction.commit();
     }
+
 }

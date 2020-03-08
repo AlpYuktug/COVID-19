@@ -3,6 +3,10 @@
 
     <string name="List">Listede Gör</string>
 
+    <string name="welcome">Hoşgeldiniz</string>
+    <string name="loading">Yükleniyor…</string>
+    <string name="network">Lütfen, internet bağlantınızı kontrol ediniz.</string>
+
     <string name="language">TR</string>
     <string name="title_dashboard">Virüs Haritası</string>
     <string name="title_news">Haberler</string>

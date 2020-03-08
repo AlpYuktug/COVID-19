@@ -2,6 +2,10 @@
     <string name="app_name">Coronavirus (COVID-19)</string>
     <string name="language">EN</string>
 
+    <string name="welcome">Welcome</string>
+    <string name="loading">Loading…</string>
+    <string name="network">Please check your internet connection and try again</string>
+
     <string name="List">See in the List</string>
 
     <string name="title_dashboard">Virus Map</string>
@@ -17,7 +21,6 @@
     <string name="WorldVirusRecovered">Total Recovered of World</string>
 
     <string name="CountryName">Country</string>
-
 
     <string name="About">Total Cases of World</string>
 </resources>
