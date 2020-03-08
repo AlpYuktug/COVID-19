@@ -77,7 +77,7 @@ public class FragmentMeasures extends Fragment {
     private void AllImage() {
         if(getString(R.string.language).contains("TR"))
         {
-            countriesDIF.GetImageListEN().enqueue(new Callback<ImageList>() {
+            countriesDIF.GetImageListTR().enqueue(new Callback<ImageList>() {
                 @Override
                 public void onResponse(Call<ImageList> call, Response<com.alpyuktug.covid_19.Models.ImageList> response) {
 
@@ -110,6 +110,11 @@ public class FragmentMeasures extends Fragment {
 
                     ImagesAdapter = new RecylerViewAdapterImages(imagesList, getActivity());
                     RecylerViewImages.setAdapter(ImagesAdapter);
+
+                    PagerSnapHelper pagerSnapHelper = new PagerSnapHelper();
+                    pagerSnapHelper.attachToRecyclerView(RecylerViewImages);
+                    RecylerViewImagesIndicator.attachToRecyclerView(RecylerViewImages, pagerSnapHelper);
+                    ImagesAdapter.registerAdapterDataObserver(RecylerViewImagesIndicator.getAdapterDataObserver());
                 }
 
                 @Override

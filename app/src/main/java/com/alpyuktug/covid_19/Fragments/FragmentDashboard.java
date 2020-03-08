@@ -99,7 +99,6 @@ public class FragmentDashboard extends Fragment{
             @Override
             public void onMapReady(GoogleMap mMap) {
                 mMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
-                //mMap.getUiSettings().setZoomGesturesEnabled(false);
                 mMap.setMaxZoomPreference(14.0f);
 
                 mMap.clear();
@@ -296,8 +295,9 @@ public class FragmentDashboard extends Fragment{
                                 }
                             });
 
-                            mMap.setMapType(GoogleMap.MAP_TYPE_SATELLITE);
-                            mMap.getUiSettings().setZoomGesturesEnabled(false);
+                            mMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
+                            //mMap.getUiSettings().setZoomGesturesEnabled(false);
+                            mMap.setMaxZoomPreference(14.0f);
 
                             mMap.clear();
 

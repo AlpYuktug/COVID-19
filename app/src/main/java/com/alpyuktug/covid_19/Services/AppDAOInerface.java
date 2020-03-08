@@ -31,4 +31,6 @@ public interface AppDAOInerface {
     @GET("api/COVID19/MeasureJSONEN.php")
     Call<ImageList> GetImageListEN();
 
+    @GET("api/COVID19/MeasureJSONTR.php")
+    Call<ImageList> GetImageListTR();
 }
