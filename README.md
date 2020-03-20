@@ -2,12 +2,17 @@
 
 When I developed ToDoListApp, I use:
 
-Java (Android)
-PHP (Web Service)
-MySQL (Database)
-Retrofit 2 (JSON Parse)
-Glide (Images)
-GitHub Libraries (App)
+- Java (Android)
+
+- PHP (Web Service)
+
+- MySQL (Database)
+
+- Retrofit 2 (JSON Parse)
+
+- Glide (Images)
+
+- Google Play Services
 
 How to install and run?
 The application is located on the GitHub platform. You can review source code, clone or download last apk.
