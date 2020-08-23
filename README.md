@@ -1,6 +1,6 @@
 # COVID-19
 
-When I developed ToDoListApp, I use:
+When I developed app, I use:
 
 - Java (Android)
 
